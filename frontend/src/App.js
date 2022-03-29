@@ -49,7 +49,7 @@ class App extends React.Component {
         </form>
 
         <div>
-          <label htmlFor="response">response </label>
+          <label htmlFor="output:">response </label>
           <p>{this.state.message}</p>
         </div>
 
