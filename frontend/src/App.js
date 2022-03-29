@@ -1,23 +1,23 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      username: "",
-      message: "",
+      firstName: "",
+      outMsg: "",
     };
   }
 
-  handleUserName(name) {
+  handleFirstName(name) {
     this.setState({ username: name });
   }
 
-  handleMsg(message) {
+  handleOutput(message) {
     this.setState({ message: message });
   }
 
-  handleClick = async () => {
+  handleButtonClick = async () => {
     const params = {
       username: this.state.username,
     };
@@ -30,7 +30,7 @@ class App extends React.Component {
     })
       .then((res) => res.json())
       .then((data) => {
-        this.handleMsg(data.msg);
+        this.handleOutput(data.msg);
       });
   };
 
@@ -38,22 +38,22 @@ class App extends React.Component {
     return (
       <div>
         <form>
-          <label htmlFor="username">username </label>
+          <label htmlFor="username">Enter First Name: </label>
           <input
             type="text"
             name="username"
             onChange={(e) => {
-              this.handleUserName(e.target.value);
+              this.handleFirstName(e.target.value);
             }}
           />
         </form>
 
         <div>
-          <label htmlFor="output:">response </label>
+          <label htmlFor="response">output: </label>
           <p>{this.state.message}</p>
         </div>
 
-        <button onClick={this.handleClick}>Submit</button>
+        <button onClick={this.handleButtonClick}>Submit</button>
 
         <p>
           README: Must Press Submit Button! Correct Input is Ethan and Correct output is Pham

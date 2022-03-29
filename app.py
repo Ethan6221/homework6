@@ -1,11 +1,10 @@
 from flask import Flask, request
 from flask_restx import Api
-#from flask_cors import CORS
 import os
+#from flask_cors import CORS
 
-app = Flask(__name__, static_folder='./frontend/build', static_url_path='/')
-#app = Flask(__name__)
 rest_api = Api(version="1.0", title="Users API")
+app = Flask(__name__, static_folder='./frontend/build', static_url_path='/')
 
 #CORS(app)
 
@@ -38,5 +37,4 @@ def not_found(e):
 
 
 if __name__ == "__main__":
-    #app.run(host='0.0.0.0', debug=False, port=os.environ.get('PORT', 80))
-    app.run(host='0.0.0.0')
+    app.run(host = '0.0.0.0')
