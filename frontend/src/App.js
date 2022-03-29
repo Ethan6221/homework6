@@ -46,14 +46,15 @@ class App extends React.Component {
               this.handleFirstName(e.target.value);
             }}
           />
+          <button onClick={this.handleButtonClick}>Submit</button>
         </form>
 
         <div>
-          <label htmlFor="response">output: </label>
+          <label htmlFor="response">Output: </label>
           <p>{this.state.message}</p>
         </div>
 
-        <button onClick={this.handleButtonClick}>Submit</button>
+
 
         <p>
           README: Must Press Submit Button! Correct Input is Ethan and Correct output is Pham
