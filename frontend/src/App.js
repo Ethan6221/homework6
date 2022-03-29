@@ -46,9 +46,8 @@ class App extends React.Component {
               this.handleFirstName(e.target.value);
             }}
           />
-          <button onClick={this.handleButtonClick}>Submit</button>
         </form>
-
+        <button onClick={this.handleButtonClick}>Submit</button>
         <div>
           <label htmlFor="response">Output: </label>
           <p>{this.state.message}</p>
