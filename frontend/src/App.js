@@ -56,7 +56,7 @@ class App extends React.Component {
         <button onClick={this.handleClick}>Submit</button>
 
         <p>
-          README: Must Press Submit Button! Correct Input is Ethan and Correct output is Pham
+          
         </p>
       </div>
     );
